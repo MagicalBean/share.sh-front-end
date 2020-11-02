@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Share.sh - Front End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The front end for share.sh, a clone of Transfer.sh and Keep.sh
+
+# Create React App Stuff:
 
 ## Available Scripts
 
