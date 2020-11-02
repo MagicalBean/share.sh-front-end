@@ -48,7 +48,7 @@ class Admin extends React.Component {
 
   fetch() {
     axios
-      .get(`http://localhost:4000/admin`)
+      .get(`${this.props.serverUrl}admin`)
       .then((res) => {
         this.setState({ isLoaded: true, data: res.data });
       })
@@ -60,7 +60,7 @@ class Admin extends React.Component {
 
   onDelete(id) {
     axios
-      .delete(`http://localhost:4000/${id}`)
+      .delete(`${this.props.serverUrl}${id}`)
       .then((res) => {
         console.log(res.data);
       })

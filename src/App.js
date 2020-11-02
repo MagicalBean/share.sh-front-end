@@ -25,6 +25,8 @@ const theme = createMuiTheme({
   },
 });
 
+const serverUrl = "http://192.168.56.1/";
+
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
@@ -32,8 +34,8 @@ function App() {
         <Nav />
         <BrowserRouter>
           <Switch>
-            <Route exact path="/download/:id" component={Download}></Route>
-            <Route exact path="/admin" component={Admin}></Route>
+            <Route exact path="/download/:id" serverUrl={serverUrl} component={Download}></Route>
+            <Route exact path="/admin" serverUrl={serverUrl} component={Admin}></Route>
             <Route path="/" component={Home}></Route>
           </Switch>
         </BrowserRouter>

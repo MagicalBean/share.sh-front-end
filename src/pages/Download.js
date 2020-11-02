@@ -62,7 +62,7 @@ class Download extends React.Component {
     const { id } = this.props.match.params;
 
     axios
-      .get(`http://localhost:4000/${id}`)
+      .get(`${this.props.serverUrl}${id}`)
       .then((res) => {
         console.log(res.data.item);
 
