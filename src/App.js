@@ -34,8 +34,16 @@ function App() {
         <Nav />
         <BrowserRouter>
           <Switch>
-            <Route exact path="/download/:id" serverUrl={serverUrl} component={Download}></Route>
-            <Route exact path="/admin" serverUrl={serverUrl} component={Admin}></Route>
+            <Route
+              exact
+              path="/download/:id"
+              render={(props) => <Download {...props} serverUrl={serverUrl} />}
+            ></Route>
+            <Route
+              exact
+              path="/admin"
+              render={(props) => <Admin {...props} serverUrl={serverUrl} />}
+            ></Route>
             <Route path="/" component={Home}></Route>
           </Switch>
         </BrowserRouter>
