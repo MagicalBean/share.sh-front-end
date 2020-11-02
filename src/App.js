@@ -25,7 +25,7 @@ const theme = createMuiTheme({
   },
 });
 
-const serverUrl = "http://192.168.56.1/";
+const serverUrl = "http://192.168.56.1:4000/";
 
 function App() {
   return (
